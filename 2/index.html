@@ -12,8 +12,25 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    	img {
+			filter: grayscale(100%);
+			transition: filter 3s;
+    	}
+
+    	.color {
+  			filter: grayscale(0%);
+ 		   	}
+    </style>
   </head>
   <body>
+	<img class="black" src="https://imagizer.imageshack.us/v2/350x496q90/822/z7ds.jpg"/>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script>
+		$("img").on("click",function(){
+			$(this).toggleClass('color')
+		})
+  	</script>
 
   </body>
 </html>
